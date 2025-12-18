@@ -4,7 +4,10 @@ A console-based Java application for managing real estate properties with MySQL 
 
 ## Features
 
+<<<<<<< HEAD
 ### Property Management
+=======
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 - Add new properties
 - View all properties
 - Search properties by location
@@ -13,6 +16,7 @@ A console-based Java application for managing real estate properties with MySQL 
 - Update property status
 - Delete properties
 
+<<<<<<< HEAD
 ### Appointment Management
 - Schedule appointments for property visits
 - View all appointments
@@ -25,6 +29,8 @@ A console-based Java application for managing real estate properties with MySQL 
 - Update payment details
 - Delete payments
 
+=======
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 ## Tech Stack
 
 - Java (Core Java)
@@ -40,6 +46,7 @@ src/
 │       └── com/
 │           └── realestate/
 │               ├── model/
+<<<<<<< HEAD
 │               │   ├── Property.java
 │               │   ├── Appointment.java
 │               │   └── Payment.java
@@ -52,12 +59,25 @@ src/
 │               └── main/
 │                   ├── RealEstateApp.java
 │                   └── TestDAOs.java
+=======
+│               │   └── Property.java
+│               ├── dao/
+│               │   └── PropertyDAO.java
+│               ├── util/
+│               │   └── DBConnection.java
+│               └── main/
+│                   └── RealEstateApp.java
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 ```
 
 ## Database Setup
 
 1. Create a MySQL database named `RealEstate`
+<<<<<<< HEAD
 2. Ensure there are tables with the following structures:
+=======
+2. Ensure there is a table named `properties` with the following structure:
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 
 ```sql
 CREATE TABLE properties (
@@ -68,6 +88,7 @@ CREATE TABLE properties (
     price DOUBLE NOT NULL,
     status VARCHAR(50) NOT NULL
 );
+<<<<<<< HEAD
 
 CREATE TABLE appointment (
     appointment_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -92,6 +113,8 @@ CREATE TABLE payment (
         ON UPDATE CASCADE
         ON DELETE CASCADE
 );
+=======
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 ```
 
 ## Configuration
@@ -101,7 +124,11 @@ The database credentials have already been configured in `src/main/java/com/real
 ```java
 private static final String URL = "jdbc:mysql://localhost:3306/RealEstate?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
 private static final String USERNAME = "root";
+<<<<<<< HEAD
 private static final String PASSWORD = "Tharshan@10";
+=======
+private static final String PASSWORD = "Root@1234";
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
 ```
 
 ## Build and Run

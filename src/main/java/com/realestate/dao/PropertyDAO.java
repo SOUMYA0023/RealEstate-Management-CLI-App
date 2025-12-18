@@ -11,15 +11,26 @@ public class PropertyDAO {
     
     // Method to add a new property
     public boolean addProperty(Property property) {
+<<<<<<< HEAD
         String sql = "INSERT INTO properties (property_name, location, area, price, status) VALUES (?, ?, ?, ?, ?)";
+=======
+        String sql = "INSERT INTO properties (property_name, location, area_sqft, price, status, property_type) VALUES (?, ?, ?, ?, ?, ?)";
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             
             stmt.setString(1, property.getPropertyName());
             stmt.setString(2, property.getLocation());
+<<<<<<< HEAD
             stmt.setDouble(3, property.getAreaSqft());
             stmt.setDouble(4, property.getPrice());
             stmt.setString(5, property.getStatus());
+=======
+            stmt.setInt(3, property.getAreaSqft());
+            stmt.setDouble(4, property.getPrice());
+            stmt.setString(5, property.getStatus());
+            stmt.setString(6, property.getPropertyType());
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
             
             int rowsAffected = stmt.executeUpdate();
             return rowsAffected > 0;
@@ -45,7 +56,11 @@ public class PropertyDAO {
                 property.setPropertyId(rs.getInt("property_id"));
                 property.setPropertyName(rs.getString("property_name"));
                 property.setLocation(rs.getString("location"));
+<<<<<<< HEAD
                 property.setAreaSqft((int) rs.getDouble("area"));
+=======
+                property.setAreaSqft(rs.getInt("area_sqft"));
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
                 property.setPrice(rs.getDouble("price"));
                 property.setStatus(rs.getString("status"));
                 properties.add(property);
@@ -75,7 +90,11 @@ public class PropertyDAO {
                     property.setPropertyId(rs.getInt("property_id"));
                     property.setPropertyName(rs.getString("property_name"));
                     property.setLocation(rs.getString("location"));
+<<<<<<< HEAD
                     property.setAreaSqft((int) rs.getDouble("area"));
+=======
+                    property.setAreaSqft(rs.getInt("area_sqft"));
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
                     property.setPrice(rs.getDouble("price"));
                     property.setStatus(rs.getString("status"));
                     properties.add(property);
@@ -106,7 +125,11 @@ public class PropertyDAO {
                     property.setPropertyId(rs.getInt("property_id"));
                     property.setPropertyName(rs.getString("property_name"));
                     property.setLocation(rs.getString("location"));
+<<<<<<< HEAD
                     property.setAreaSqft((int) rs.getDouble("area"));
+=======
+                    property.setAreaSqft(rs.getInt("area_sqft"));
+>>>>>>> 0007f3b875f7bb1a984c811527c73b9ac1106477
                     property.setPrice(rs.getDouble("price"));
                     property.setStatus(rs.getString("status"));
                     properties.add(property);
