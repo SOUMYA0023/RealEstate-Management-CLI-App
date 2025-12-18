@@ -71,8 +71,11 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
-# Lib directory
-lib/
+# Lib directory (but keep structure)
+lib/*.jar
+
+# Keep the lib directory structure
+!lib/.gitkeep
 
 # Target directory
 target/
